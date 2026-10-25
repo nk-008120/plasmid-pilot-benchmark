@@ -1,0 +1,209 @@
+{
+  "benchmark": "plasmid-pilot payload retrieval under a holdout",
+  "built_from_commit_note": "built from plasmid-pilot (private working record) at commit c632915",
+  "task": "given one protein per item (the payload-bearing ORF as a naive caller emitted it) and the catalogue, return a ranking of catalogue accessions. Scored on where the best relative SURVIVING each holdout threshold lands.",
+  "rules_as_code": "src/pilot/benchmark.py",
+  "provenance": {
+    "columns": {
+      "source_file": "the record this item was built from, as the tier manifest names it. Empty for no item",
+      "source_id": "the depositor-facing id, read from the tier manifest and never derived from construct_id. Empty for the two generated tiers, whose manifests have no such column",
+      "source_url": "where the deposit can be fetched. Present for the hand tier; the corpus manifest carries no URL column, so it is empty there and source_id names the record",
+      "filler_source": "`swissprot` for synth_real. Empty for synth_random, whose filler is random sequence by the tier definition, and for the deposited tiers, which have no filler concept",
+      "plasmid_id": "construct_id before namespacing",
+      "orf_strand / orf_start / orf_end": "1-based inclusive on the plasmid, the same coordinates packed into orf_id",
+      "orf_wraps_origin": "1 when the ORF crosses the origin of a circular plasmid, so end < start"
+    },
+    "coordinates_note": "the plasmids are circular and the ORF caller is a circular six-frame scanner, so `end - start + 1` is NEGATIVE where orf_wraps_origin is 1. Take a length from `orf_len`, which is derived from the translated sequence and is correct for every item. The per-tier counts are in `tiers[].orfs_wrapping_origin`",
+    "uniprot_note": "`queries.faa` is not free of third-party sequence and the licence section says so. Each tier reports `queries_containing_payload_verbatim`: the payload is a real Swiss-Prot protein in every tier, and in the two GENERATED tiers it appears exactly, because those constructs are built around an exact payload span. So the synthetic tiers are the ones where a query certainly contains UniProt sequence, which is the opposite of what the word synthetic suggests"
+  },
+  "licence": {
+    "code_and_derived_data": "MIT",
+    "covers": "src/, scripts/, items.csv, queries.faa, homologs.csv and both baseline pairs: this project's own derivation",
+    "catalogue": "CC BY 4.0",
+    "catalogue_note": "reference_twilight.fasta is derived from UniProt Swiss-Prot and carries UniProt's CC BY 4.0 attribution. It is attached to the release, not committed; this directory carries the accession list and the sha256",
+    "citation": "CITATION.cff at the repository root"
+  },
+  "scorer": "scripts/53_score_submission.py",
+  "thresholds": [
+    1.0,
+    0.9,
+    0.7,
+    0.5,
+    0.35,
+    0.25
+  ],
+  "depth": 10,
+  "strata": [
+    {
+      "name": "f < 0.50",
+      "lo": 0.0,
+      "hi": 0.5
+    },
+    {
+      "name": "0.50-0.70",
+      "lo": 0.5,
+      "hi": 0.7
+    },
+    {
+      "name": "0.70-0.95",
+      "lo": 0.7,
+      "hi": 0.95
+    },
+    {
+      "name": "f >= 0.95",
+      "lo": 0.95,
+      "hi": 1.0000001
+    }
+  ],
+  "metric_rules": [
+    "mean rank and MRR are primary, stratified by f; recall@10 is the operational secondary; top-1 is a column and never a headline",
+    "for an embedding arm recall@10 and MRR are primary, and a mean rank may be quoted only beside its count of rank >= 10,000 failures",
+    "no pooled scalar across f strata, ever; pilot.benchmark.pooled_scalar raises",
+    "micro and macro are both always reported: constructs are not independent trials",
+    "an item that cannot be scored stays in the denominator as a miss",
+    "never pool the tiers into one number"
+  ],
+  "f_definition": "oracle_span_length / len(payload-bearing ORF), from pilot.arms.build_arms. NOT the longest ORF: that mistake produced a wrong hand-tier distribution on 17 Oct that tier totals could not have caught",
+  "tiers": [
+    {
+      "tier": "hand",
+      "description": "23 hand-audited deposits; ground truth is the depositor's stated insert. Realism, and the anchor",
+      "results_dir": "results\\gate173_bhs_hand",
+      "manifest": "data\\manifest.csv",
+      "items": 20,
+      "excluded": {
+        "no_payload_accession": 3,
+        "payload_absent_from_catalogue": 0,
+        "no_orf_carries_the_payload": 0
+      },
+      "queries_containing_payload_verbatim": 2,
+      "items_naming_a_deposit": 20,
+      "manifest_has_source_id_column": true,
+      "orfs_wrapping_origin": 1,
+      "orf_ids_not_parsed": 0
+    },
+    {
+      "tier": "corpus",
+      "description": "410 screened NCBI records, 138 distinct payloads; ground truth by gated alignment, 80% validated. Breadth and statistical power, and note the constructs are NOT independent trials",
+      "results_dir": "results\\persegment_corpus",
+      "manifest": "data\\manifest_auto.csv",
+      "items": 410,
+      "excluded": {
+        "no_payload_accession": 379,
+        "payload_absent_from_catalogue": 0,
+        "no_orf_carries_the_payload": 0
+      },
+      "queries_containing_payload_verbatim": 185,
+      "items_naming_a_deposit": 410,
+      "manifest_has_source_id_column": true,
+      "orfs_wrapping_origin": 4,
+      "orf_ids_not_parsed": 0
+    },
+    {
+      "tier": "synth_real",
+      "description": "336 synthetic constructs with exact boundaries and real filler. The only tier built INSIDE the diluted regime: median f 0.600, 64.3% below 0.70",
+      "results_dir": "results\\persegment_synthreal",
+      "manifest": "data\\synthetic_real\\synthetic_manifest.csv",
+      "items": 336,
+      "excluded": {
+        "no_payload_accession": 0,
+        "payload_absent_from_catalogue": 0,
+        "no_orf_carries_the_payload": 0
+      },
+      "queries_containing_payload_verbatim": 336,
+      "items_naming_a_deposit": 0,
+      "manifest_has_source_id_column": false,
+      "orfs_wrapping_origin": 0,
+      "orf_ids_not_parsed": 0
+    },
+    {
+      "tier": "synth_random",
+      "description": "the same 336 constructs as synth_real with random-sequence filler instead of SwissProt filler, matched residue for residue on f. The worst case for a mean-pooled embedding arm, where synth_real is the worst case for alignment: 'adversarial' is scorer-dependent",
+      "results_dir": "results\\persegment_synthetic",
+      "manifest": "data\\synthetic\\synthetic_manifest.csv",
+      "items": 336,
+      "excluded": {
+        "no_payload_accession": 0,
+        "payload_absent_from_catalogue": 0,
+        "no_orf_carries_the_payload": 0
+      },
+      "queries_containing_payload_verbatim": 336,
+      "items_naming_a_deposit": 0,
+      "manifest_has_source_id_column": false,
+      "orfs_wrapping_origin": 0,
+      "orf_ids_not_parsed": 0
+    }
+  ],
+  "n_items": 1102,
+  "n_payloads": 173,
+  "construct_ids_namespaced": true,
+  "strata_counts": {
+    "hand": {
+      "f < 0.50": 4,
+      "0.70-0.95": 7,
+      "f >= 0.95": 8,
+      "0.50-0.70": 1
+    },
+    "corpus": {
+      "f >= 0.95": 339,
+      "0.70-0.95": 50,
+      "0.50-0.70": 15,
+      "f < 0.50": 6
+    },
+    "synth_real": {
+      "f >= 0.95": 48,
+      "0.70-0.95": 72,
+      "0.50-0.70": 72,
+      "f < 0.50": 144
+    },
+    "synth_random": {
+      "f >= 0.95": 48,
+      "0.70-0.95": 72,
+      "0.50-0.70": 72,
+      "f < 0.50": 144
+    }
+  },
+  "catalogue": {
+    "path": "results\\gate_all173\\reference_twilight.fasta",
+    "sha256": "43b8b3c0b5cb7440ce02387e54bd9b99e3c44f9c5fbb62c94050368da44ca355",
+    "entries": 40750,
+    "entries_in_window": 40749,
+    "window_aa": [
+      50,
+      5000
+    ],
+    "residues": 20806731,
+    "shipped_as": "accession list and checksum",
+    "distribution": "decided 20 Oct: the repository carries the accession list and this checksum, and the FASTA is attached to the release. Verify a copy with `52_build_benchmark.py --verify-catalogue <fasta>`",
+    "built_by": "exact Smith-Waterman over Swiss-Prot; the search script is part of the working repository and is not shipped, because the catalogue is distributed as an accession list and a checksum",
+    "source": {
+      "path": "data\\swissprot\\uniprot_sprot.fasta.gz",
+      "sha256": "a9c3496aa727e61d25d9e1291c9ba28d2c2ad19c0e26569dc083d53ec4169536",
+      "bytes": 93801562,
+      "release_label": "NOT RECORDED when downloaded (~19 Oct). The sha256 above is what pins this input, and a different Swiss-Prot release would change the catalogue and therefore the significance floor. This is why the release ships the FASTA: a rebuild cannot be checked against the checksum without it"
+    },
+    "note": "the significance floor is a function of this residue count, so a different catalogue is a different benchmark. This project has used eighteen reference sets and keeps a register of them; this is the 40,750-protein gate_all173 one",
+    "score_floor_at_m100": 94.27,
+    "score_floor_at_m3000": 107.01,
+    "max_evalue": 0.001
+  },
+  "files": {
+    "items.csv": {
+      "bytes": 218303,
+      "sha256": "80bda4551b24a93747bacc0dbff9479a5c9aaa1fa2b1c85b3098e4dc96707edc"
+    },
+    "queries.faa": {
+      "bytes": 817637,
+      "sha256": "4c7a607045f9a8e25eba1e63cfd86fba7bc50ee75d538cf8d1bd3a43feca6afd"
+    },
+    "homologs.csv": {
+      "bytes": 1911366,
+      "sha256": "e7bb2b5783e99a790066ee3da77235d9e1f939eb1dbd85b5522b84057bb3e29f"
+    },
+    "catalogue_accessions.txt": {
+      "bytes": 287102,
+      "sha256": "022b1cf34f3493079ab577104f34f28967b2f3c1ef6f381fc9657ae9b8b3772d"
+    },
+    "_checksum_note": "sha256 is over the bytes git stores and every clone receives (LF). .gitattributes pins benchmark/** to eol=lf for this reason: a checksum computed over platform-dependent bytes verifies only on the platform that wrote it"
+  }
+}
