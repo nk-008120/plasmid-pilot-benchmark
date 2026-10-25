@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plasmid-pilot"
+version = "0.1.0"
+description = "Pilot for function-based synthesis screening: circular-aware ORF calling, construct decomposition, and twilight-zone retrieval benchmarks"
+requires-python = ">=3.10"
+dependencies = ["biopython>=1.83", "numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+esm = ["torch>=2.0", "transformers>=4.30"]  # only needed for the real ESM-2 run
+align = ["parasail>=1.3"]                   # Smith-Waterman control arm and Swiss-Prot homolog discovery
+figures = ["matplotlib>=3.7"]               # scripts/07_figures.py only
+
+[project.scripts]
+pilot-validate = "pilot.validate:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

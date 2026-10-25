@@ -1,0 +1,21 @@
+{
+  "tier": "hand",
+  "arm": "whole",
+  "verdict": "IDENTICAL",
+  "cells_compared": 120,
+  "identical": 120,
+  "mismatched": 0,
+  "not_in_published_csv": 0,
+  "mismatches": [],
+  "binding": {
+    "items": 20,
+    "missing_from_submission": 0,
+    "unknown_accessions": 0,
+    "rank_beyond_submitted_depth": 0,
+    "no_target_at_threshold": 9,
+    "submitted_depth": null
+  },
+  "published_source": "results\\persegment_hand_bhs\\twilight_sw-blosum62-11-1_hand.csv",
+  "catalogue_entries": 40750,
+  "scoring_seconds": 93.5
+}
