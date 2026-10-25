@@ -1,0 +1,57 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.venv/
+
+# Raw GenBank downloads: keep them out of git by default (redistribution terms vary by source).
+# Reproducibility is preserved by results/run_info.json (sha256 of every input) and data/manifest.csv (source IDs).
+data/raw/*
+!data/raw/.gitkeep
+
+# Generated outputs; commit a results folder deliberately when you want a frozen snapshot.
+results/*
+!results/.gitkeep
+# Exceptions, added deliberately: the figure PNGs the portfolio deck embeds, plus the two
+# measurement files its charts read. They are tracked with `git add -f` so the deck rebuilds
+# from a clean clone. a tool in the working repository's SPEC is the authoritative list.
+data/embed_cache/ 
+
+# Machine-to-machine transfer bundles: copies of gitignored results/, not sources.
+transfer/
+
+# Swiss-Prot release FASTA: a large external download, re-fetchable from UniProt.
+data/swissprot/
+
+# Derived: `scripts/44_route_b_bench.py` rebuilds this from data/route_b_raw/ plus the f table in
+# seconds, and every file in it is a byte-for-byte copy of one already committed under route_b_raw.
+# The decision it encodes -- which record of each deposit is measured -- lives in the manifests.
+data/route_b_kept/
+
+# The IRI project description this work answers (Kevin Flyangolts). Kept at the repo root so every
+# claim about "the original proposal" can be checked against the source rather than against CONTEXT's
+# paraphrase of it, and gitignored because it is someone else's document, not this project's output.
+IRI_Research_Proposal_Parsing_complex_constructs.pdf
+
+# Office lock files. Word and PowerPoint write a ~$<name> stub beside an open document and delete it on
+# close, so one only reaches git if the app was open when a commit ran. It is never content.
+~$*
+
+# Dropped in the repository root by unpacking an Omen transfer bundle (a tool in the working repository).
+# --verify reads the copy inside the zip, not this one, so the extracted file is inert.
+BUNDLE_MANIFEST.json
+
+# Generated: prepared figures for the portfolio deck (a tool in the working repository rebuilds them
+# from the tracked source PNGs its SPEC lists).
+build/
+
+# Third-party papers, dropped here to be read and never redistributed (23 Oct). Copyrighted
+# PDFs must not be committed and must not reach the public tree; gitignoring them means the
+# release build never sees them, because it reads a clone.
+literature/
+
+# A pytest --basetemp directory, committed by accident on 24 Oct: 44 files and 11.2 MB of run
+# scratch, including three copies each of the catalogue accession list and homologs.csv. Nothing
+# in the repository references it. `.pytest_cache/` above does not cover a basetemp dir, because
+# --basetemp names its own path -- so an explicit entry is the only thing that stops this
+# recurring, and a basetemp passed under a different name would need its own line.
+.pytest-postr10-tmp/

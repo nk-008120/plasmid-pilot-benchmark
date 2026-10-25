@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this benchmark or the code behind it, please cite it as below."
+title: "Payload retrieval under a holdout: a benchmark for decomposition in function-based screening"
+abstract: >-
+  A retrieval benchmark that asks whether function-based (embedding) screening needs a
+  decomposition step in a way local alignment does not. Each item supplies one protein,
+  the payload-bearing ORF as a naive six-frame caller emitted it, and a 40,750-protein
+  catalogue, and asks for a ranking. The benchmark then removes the payload's close
+  relatives at six identity thresholds and reads where the best surviving relative lands.
+  1,102 items over four tiers, stratified by payload fraction, with two baselines and the
+  scoring rules shipped as code.
+authors:
+  - family-names: Kalani
+    given-names: Nishit
+version: "v1"
+date-released: "2026-10-26"
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+keywords:
+  - protein retrieval
+  - sequence embeddings
+  - Smith-Waterman
+  - synthetic constructs
+  - biosecurity screening
+  - benchmark
+repository-code: "https://github.com/nk-008120/plasmid-pilot-benchmark"

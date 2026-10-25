@@ -1,0 +1,38 @@
+# Line endings, stated here rather than left to each machine's core.autocrlf.
+#
+# Why this file exists (22 Oct). With no .gitattributes and autocrlf=true, git
+# stored every text file as LF and handed this Windows worktree CRLF. Nothing was wrong in the
+# repository and two things were wrong outside it: the four sha256s published in
+# benchmark/v1/MANIFEST.json were computed over the CRLF worktree bytes, so a clone on any other
+# platform fails the benchmark's own checksum check; and the four WSL helpers under scripts/
+# survive as LF only because nothing has re-checked them out yet.
+
+# Normalise text to LF in the repository, check it out in the platform's own form.
+* text=auto
+
+# The published benchmark is byte-identical on every platform, because its checksums are
+# published. A sha256 over platform-dependent bytes verifies only on the machine that wrote it.
+benchmark/** text eol=lf
+
+# WSL helpers for DIAMOND. A CR here is `$'\r': command not found` from bash, on first use.
+*.sh text eol=lf
+
+# Windows batch wants CRLF.
+*.bat text eol=crlf
+
+# A finished results folder is never edited, so git does not convert one either.
+results/** -text
+
+# Binaries: no conversion, no diff.
+*.pptx binary
+*.docx binary
+*.xlsx binary
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.zip   binary
+*.gz    binary
+*.npy   binary
+*.npz   binary

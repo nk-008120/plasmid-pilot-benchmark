@@ -1,0 +1,577 @@
+﻿tier,arm,threshold,stratum,arm_kind,primary_metrics,n,n_unscorable,recall_at_10,mrr,mean_rank,median_rank,n_rank_ge_failure,top1,n_payloads,recall_at_10_macro,mrr_macro,mean_rank_macro
+corpus,auto,1.0,f < 0.50,alignment,"mean_rank,mrr",6,0,0.6667,0.5707,8.33,2,0,3,5,0.8,0.6758,5.6
+corpus,auto,1.0,0.50-0.70,alignment,"mean_rank,mrr",15,0,0.8667,0.8357,8.53,1,0,12,11,0.9091,0.8652,6.18
+corpus,auto,1.0,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.8839,1.4,1,0,40,22,1.0,0.827,1.73
+corpus,auto,1.0,f >= 0.95,alignment,"mean_rank,mrr",339,0,0.9912,0.9422,1.46,1,0,307,110,0.9818,0.9014,1.93
+corpus,auto,0.9,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,1.0,1.0,1,0,6,5,1.0,1.0,1.0
+corpus,auto,0.9,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.7333,1.93,1,0,9,11,1.0,0.8523,1.5
+corpus,auto,0.9,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.94,1.12,1,0,44,22,1.0,0.9318,1.14
+corpus,auto,0.9,f >= 0.95,alignment,"mean_rank,mrr",339,4,0.9882,0.9742,1.04,1,0,327,110,0.9727,0.9341,1.08
+corpus,auto,0.7,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,0.8333,1.33,1,0,4,5,1.0,0.9,1.2
+corpus,auto,0.7,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.7111,2.07,1,0,9,11,1.0,0.8371,1.59
+corpus,auto,0.7,0.70-0.95,alignment,"mean_rank,mrr",50,2,0.96,0.91,1.1,1,0,43,22,0.9545,0.8864,1.09
+corpus,auto,0.7,f >= 0.95,alignment,"mean_rank,mrr",339,8,0.9764,0.9358,1.14,1,0,310,110,0.9545,0.8841,1.18
+corpus,auto,0.5,f < 0.50,alignment,"mean_rank,mrr",6,1,0.6667,0.5556,3.8,1,0,3,5,0.6,0.4667,3.6
+corpus,auto,0.5,0.50-0.70,alignment,"mean_rank,mrr",15,2,0.8667,0.5595,2.38,2,0,6,11,0.8182,0.6201,1.55
+corpus,auto,0.5,0.70-0.95,alignment,"mean_rank,mrr",50,5,0.9,0.86,1.09,1,0,41,22,0.9091,0.8636,1.0
+corpus,auto,0.5,f >= 0.95,alignment,"mean_rank,mrr",339,18,0.9469,0.9238,1.05,1,0,306,110,0.9091,0.8901,0.96
+corpus,auto,0.35,f < 0.50,alignment,"mean_rank,mrr",6,1,0.5,0.5174,8.4,1,0,3,5,0.4,0.4209,8.2
+corpus,auto,0.35,0.50-0.70,alignment,"mean_rank,mrr",15,4,0.7333,0.4262,2.64,2,0,4,11,0.7273,0.4838,1.55
+corpus,auto,0.35,0.70-0.95,alignment,"mean_rank,mrr",50,10,0.8,0.72,1.45,1,0,34,22,0.8182,0.7576,1.09
+corpus,auto,0.35,f >= 0.95,alignment,"mean_rank,mrr",339,30,0.9115,0.8493,1.16,1,0,270,110,0.8455,0.7949,0.97
+corpus,auto,0.25,f < 0.50,alignment,"mean_rank,mrr",6,1,0.5,0.5043,31.6,1,0,3,5,0.4,0.4052,31.4
+corpus,auto,0.25,0.50-0.70,alignment,"mean_rank,mrr",15,5,0.5333,0.2791,44.0,3,0,2,11,0.5,0.2986,20.64
+corpus,auto,0.25,0.70-0.95,alignment,"mean_rank,mrr",50,26,0.48,0.3875,2.04,1,0,17,22,0.4091,0.3239,0.82
+corpus,auto,0.25,f >= 0.95,alignment,"mean_rank,mrr",339,92,0.7257,0.6289,1.49,1,0,192,110,0.6273,0.5667,1.03
+corpus,auto_per_segment,1.0,f < 0.50,alignment,"mean_rank,mrr",6,0,0.6667,0.5707,8.33,2,0,3,5,0.8,0.6758,5.6
+corpus,auto_per_segment,1.0,0.50-0.70,alignment,"mean_rank,mrr",15,0,0.8667,0.8357,8.53,1,0,12,11,0.9091,0.8652,6.18
+corpus,auto_per_segment,1.0,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.8839,1.4,1,0,40,22,1.0,0.827,1.73
+corpus,auto_per_segment,1.0,f >= 0.95,alignment,"mean_rank,mrr",339,0,0.9912,0.9422,1.46,1,0,307,110,0.9818,0.9014,1.93
+corpus,auto_per_segment,0.9,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,1.0,1.0,1,0,6,5,1.0,1.0,1.0
+corpus,auto_per_segment,0.9,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.7333,1.93,1,0,9,11,1.0,0.8523,1.5
+corpus,auto_per_segment,0.9,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.94,1.12,1,0,44,22,1.0,0.9318,1.14
+corpus,auto_per_segment,0.9,f >= 0.95,alignment,"mean_rank,mrr",339,4,0.9882,0.9742,1.04,1,0,327,110,0.9727,0.9341,1.08
+corpus,auto_per_segment,0.7,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,0.8333,1.33,1,0,4,5,1.0,0.9,1.2
+corpus,auto_per_segment,0.7,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.7111,2.07,1,0,9,11,1.0,0.8371,1.59
+corpus,auto_per_segment,0.7,0.70-0.95,alignment,"mean_rank,mrr",50,2,0.96,0.91,1.1,1,0,43,22,0.9545,0.8864,1.09
+corpus,auto_per_segment,0.7,f >= 0.95,alignment,"mean_rank,mrr",339,8,0.9764,0.9358,1.14,1,0,310,110,0.9545,0.8841,1.18
+corpus,auto_per_segment,0.5,f < 0.50,alignment,"mean_rank,mrr",6,1,0.6667,0.5556,3.8,1,0,3,5,0.6,0.4667,3.6
+corpus,auto_per_segment,0.5,0.50-0.70,alignment,"mean_rank,mrr",15,2,0.8667,0.5595,2.38,2,0,6,11,0.8182,0.6201,1.55
+corpus,auto_per_segment,0.5,0.70-0.95,alignment,"mean_rank,mrr",50,5,0.9,0.86,1.09,1,0,41,22,0.9091,0.8636,1.0
+corpus,auto_per_segment,0.5,f >= 0.95,alignment,"mean_rank,mrr",339,18,0.9469,0.9238,1.05,1,0,306,110,0.9091,0.8901,0.96
+corpus,auto_per_segment,0.35,f < 0.50,alignment,"mean_rank,mrr",6,1,0.5,0.5174,8.4,1,0,3,5,0.4,0.4209,8.2
+corpus,auto_per_segment,0.35,0.50-0.70,alignment,"mean_rank,mrr",15,4,0.7333,0.4595,2.55,2,0,5,11,0.7273,0.5292,1.45
+corpus,auto_per_segment,0.35,0.70-0.95,alignment,"mean_rank,mrr",50,10,0.8,0.72,1.45,1,0,34,22,0.8182,0.7576,1.09
+corpus,auto_per_segment,0.35,f >= 0.95,alignment,"mean_rank,mrr",339,30,0.9115,0.8493,1.16,1,0,270,110,0.8455,0.7949,0.97
+corpus,auto_per_segment,0.25,f < 0.50,alignment,"mean_rank,mrr",6,1,0.5,0.5043,31.6,1,0,3,5,0.4,0.4052,31.4
+corpus,auto_per_segment,0.25,0.50-0.70,alignment,"mean_rank,mrr",15,5,0.5333,0.3129,43.8,3,0,3,11,0.5,0.3447,20.45
+corpus,auto_per_segment,0.25,0.70-0.95,alignment,"mean_rank,mrr",50,26,0.48,0.3875,2.04,1,0,17,22,0.4091,0.3239,0.82
+corpus,auto_per_segment,0.25,f >= 0.95,alignment,"mean_rank,mrr",339,92,0.7257,0.6289,1.49,1,0,192,110,0.6273,0.5667,1.03
+corpus,bhs,1.0,f < 0.50,alignment,"mean_rank,mrr",6,0,0.6667,0.5707,8.33,2,0,3,5,0.8,0.6758,5.6
+corpus,bhs,1.0,0.50-0.70,alignment,"mean_rank,mrr",15,0,0.8667,0.8357,8.53,1,0,12,11,0.9091,0.8652,6.18
+corpus,bhs,1.0,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.8839,1.4,1,0,40,22,1.0,0.827,1.73
+corpus,bhs,1.0,f >= 0.95,alignment,"mean_rank,mrr",339,0,0.9912,0.9422,1.46,1,0,307,110,0.9818,0.9014,1.93
+corpus,bhs,0.9,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,1.0,1.0,1,0,6,5,1.0,1.0,1.0
+corpus,bhs,0.9,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.7333,1.93,1,0,9,11,1.0,0.8523,1.5
+corpus,bhs,0.9,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.94,1.12,1,0,44,22,1.0,0.9318,1.14
+corpus,bhs,0.9,f >= 0.95,alignment,"mean_rank,mrr",339,4,0.9882,0.9769,1.03,1,0,328,110,0.9727,0.9424,1.05
+corpus,bhs,0.7,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,0.8333,1.33,1,0,4,5,1.0,0.9,1.2
+corpus,bhs,0.7,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.7111,2.07,1,0,9,11,1.0,0.8371,1.59
+corpus,bhs,0.7,0.70-0.95,alignment,"mean_rank,mrr",50,2,0.96,0.91,1.1,1,0,43,22,0.9545,0.8864,1.09
+corpus,bhs,0.7,f >= 0.95,alignment,"mean_rank,mrr",339,8,0.9764,0.9358,1.14,1,0,310,110,0.9545,0.8841,1.18
+corpus,bhs,0.5,f < 0.50,alignment,"mean_rank,mrr",6,1,0.6667,0.5429,4.0,1,0,3,5,0.6,0.4515,3.8
+corpus,bhs,0.5,0.50-0.70,alignment,"mean_rank,mrr",15,2,0.8667,0.5595,2.38,2,0,6,11,0.8182,0.6201,1.55
+corpus,bhs,0.5,0.70-0.95,alignment,"mean_rank,mrr",50,5,0.9,0.86,1.09,1,0,41,22,0.9091,0.8636,1.0
+corpus,bhs,0.5,f >= 0.95,alignment,"mean_rank,mrr",339,18,0.9469,0.9415,1.02,1,0,318,110,0.9091,0.8924,0.95
+corpus,bhs,0.35,f < 0.50,alignment,"mean_rank,mrr",6,1,0.5,0.5147,10.8,1,0,3,5,0.4,0.4176,10.6
+corpus,bhs,0.35,0.50-0.70,alignment,"mean_rank,mrr",15,4,0.7333,0.4151,2.73,2,0,4,11,0.7273,0.4686,1.64
+corpus,bhs,0.35,0.70-0.95,alignment,"mean_rank,mrr",50,10,0.8,0.72,1.45,1,0,34,22,0.8182,0.7576,1.09
+corpus,bhs,0.35,f >= 0.95,alignment,"mean_rank,mrr",339,30,0.9115,0.8476,1.16,1,0,268,110,0.8455,0.7913,0.97
+corpus,bhs,0.25,f < 0.50,alignment,"mean_rank,mrr",6,1,0.5,0.5038,38.4,1,0,3,5,0.4,0.4045,38.2
+corpus,bhs,0.25,0.50-0.70,alignment,"mean_rank,mrr",15,5,0.5333,0.2777,44.2,3,0,2,11,0.5,0.2967,20.91
+corpus,bhs,0.25,0.70-0.95,alignment,"mean_rank,mrr",50,26,0.48,0.3875,2.04,1,0,17,22,0.4091,0.3239,0.82
+corpus,bhs,0.25,f >= 0.95,alignment,"mean_rank,mrr",339,92,0.7257,0.6304,1.47,1,0,191,110,0.6273,0.5715,1.01
+corpus,bhs_per_segment,1.0,f < 0.50,alignment,"mean_rank,mrr",6,0,0.6667,0.5707,8.33,2,0,3,5,0.8,0.6758,5.6
+corpus,bhs_per_segment,1.0,0.50-0.70,alignment,"mean_rank,mrr",15,0,0.8667,0.8357,8.53,1,0,12,11,0.9091,0.8652,6.18
+corpus,bhs_per_segment,1.0,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.8839,1.4,1,0,40,22,1.0,0.827,1.73
+corpus,bhs_per_segment,1.0,f >= 0.95,alignment,"mean_rank,mrr",339,0,0.9912,0.9422,1.46,1,0,307,110,0.9818,0.9014,1.93
+corpus,bhs_per_segment,0.9,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,1.0,1.0,1,0,6,5,1.0,1.0,1.0
+corpus,bhs_per_segment,0.9,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.9333,1.13,1,0,13,11,1.0,0.9545,1.09
+corpus,bhs_per_segment,0.9,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.94,1.12,1,0,44,22,1.0,0.9318,1.14
+corpus,bhs_per_segment,0.9,f >= 0.95,alignment,"mean_rank,mrr",339,4,0.9882,0.9769,1.03,1,0,328,110,0.9727,0.9424,1.05
+corpus,bhs_per_segment,0.7,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,0.8333,1.33,1,0,4,5,1.0,0.9,1.2
+corpus,bhs_per_segment,0.7,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.9111,1.27,1,0,13,11,1.0,0.9394,1.18
+corpus,bhs_per_segment,0.7,0.70-0.95,alignment,"mean_rank,mrr",50,2,0.96,0.91,1.1,1,0,43,22,0.9545,0.8864,1.09
+corpus,bhs_per_segment,0.7,f >= 0.95,alignment,"mean_rank,mrr",339,8,0.9764,0.9358,1.14,1,0,310,110,0.9545,0.8841,1.18
+corpus,bhs_per_segment,0.5,f < 0.50,alignment,"mean_rank,mrr",6,1,0.8333,0.8333,1.0,1,0,5,5,0.8,0.8,0.8
+corpus,bhs_per_segment,0.5,0.50-0.70,alignment,"mean_rank,mrr",15,2,0.8667,0.8,1.15,1,0,11,11,0.8182,0.7727,0.91
+corpus,bhs_per_segment,0.5,0.70-0.95,alignment,"mean_rank,mrr",50,5,0.9,0.86,1.09,1,0,41,22,0.9091,0.8636,1.0
+corpus,bhs_per_segment,0.5,f >= 0.95,alignment,"mean_rank,mrr",339,18,0.9469,0.9415,1.02,1,0,318,110,0.9091,0.8924,0.95
+corpus,bhs_per_segment,0.35,f < 0.50,alignment,"mean_rank,mrr",6,1,0.8333,0.8333,1.0,1,0,5,5,0.8,0.8,0.8
+corpus,bhs_per_segment,0.35,0.50-0.70,alignment,"mean_rank,mrr",15,4,0.7333,0.6667,1.18,1,0,9,11,0.7273,0.6364,0.91
+corpus,bhs_per_segment,0.35,0.70-0.95,alignment,"mean_rank,mrr",50,10,0.8,0.77,1.07,1,0,37,22,0.8182,0.7955,0.86
+corpus,bhs_per_segment,0.35,f >= 0.95,alignment,"mean_rank,mrr",339,30,0.9115,0.8476,1.16,1,0,268,110,0.8455,0.7913,0.97
+corpus,bhs_per_segment,0.25,f < 0.50,alignment,"mean_rank,mrr",6,1,0.8333,0.6389,1.6,1,0,3,5,0.8,0.5667,1.4
+corpus,bhs_per_segment,0.25,0.50-0.70,alignment,"mean_rank,mrr",15,5,0.6,0.5711,2.5,1,0,8,11,0.5455,0.5061,2.0
+corpus,bhs_per_segment,0.25,0.70-0.95,alignment,"mean_rank,mrr",50,26,0.48,0.4,1.42,1,0,17,22,0.4091,0.3333,0.59
+corpus,bhs_per_segment,0.25,f >= 0.95,alignment,"mean_rank,mrr",339,92,0.7257,0.6363,1.45,1,0,195,110,0.6273,0.576,1.0
+corpus,oracle,1.0,f < 0.50,alignment,"mean_rank,mrr",6,0,0.6667,0.6842,7.0,1,0,4,5,0.8,0.8105,4.6
+corpus,oracle,1.0,0.50-0.70,alignment,"mean_rank,mrr",15,0,0.8667,0.8359,7.73,1,0,12,11,0.9091,0.8654,5.64
+corpus,oracle,1.0,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.8839,1.4,1,0,40,22,1.0,0.827,1.73
+corpus,oracle,1.0,f >= 0.95,alignment,"mean_rank,mrr",339,0,0.9912,0.9423,1.46,1,0,307,110,0.9818,0.9016,1.92
+corpus,oracle,0.9,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,1.0,1.0,1,0,6,5,1.0,1.0,1.0
+corpus,oracle,0.9,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.9333,1.13,1,0,13,11,1.0,0.9545,1.09
+corpus,oracle,0.9,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.94,1.12,1,0,44,22,1.0,0.9318,1.14
+corpus,oracle,0.9,f >= 0.95,alignment,"mean_rank,mrr",339,4,0.9882,0.9747,1.04,1,0,327,110,0.9727,0.9356,1.07
+corpus,oracle,0.7,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,0.8333,1.33,1,0,4,5,1.0,0.9,1.2
+corpus,oracle,0.7,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.9111,1.27,1,0,13,11,1.0,0.9394,1.18
+corpus,oracle,0.7,0.70-0.95,alignment,"mean_rank,mrr",50,2,0.96,0.91,1.1,1,0,43,22,0.9545,0.8864,1.09
+corpus,oracle,0.7,f >= 0.95,alignment,"mean_rank,mrr",339,8,0.9764,0.9358,1.14,1,0,310,110,0.9545,0.8841,1.18
+corpus,oracle,0.5,f < 0.50,alignment,"mean_rank,mrr",6,1,0.8333,0.8333,1.0,1,0,5,5,0.8,0.8,0.8
+corpus,oracle,0.5,0.50-0.70,alignment,"mean_rank,mrr",15,2,0.8667,0.8,1.15,1,0,11,11,0.8182,0.7727,0.91
+corpus,oracle,0.5,0.70-0.95,alignment,"mean_rank,mrr",50,5,0.9,0.86,1.09,1,0,41,22,0.9091,0.8636,1.0
+corpus,oracle,0.5,f >= 0.95,alignment,"mean_rank,mrr",339,18,0.9469,0.9238,1.05,1,0,306,110,0.9091,0.8901,0.96
+corpus,oracle,0.35,f < 0.50,alignment,"mean_rank,mrr",6,1,0.8333,0.8333,1.0,1,0,5,5,0.8,0.8,0.8
+corpus,oracle,0.35,0.50-0.70,alignment,"mean_rank,mrr",15,4,0.7333,0.7333,1.0,1,0,11,11,0.7273,0.7273,0.73
+corpus,oracle,0.35,0.70-0.95,alignment,"mean_rank,mrr",50,10,0.8,0.77,1.07,1,0,37,22,0.8182,0.7955,0.86
+corpus,oracle,0.35,f >= 0.95,alignment,"mean_rank,mrr",339,30,0.9115,0.85,1.15,1,0,270,110,0.8455,0.7955,0.96
+corpus,oracle,0.25,f < 0.50,alignment,"mean_rank,mrr",6,1,0.8333,0.6071,2.4,1,0,3,5,0.8,0.5286,2.2
+corpus,oracle,0.25,0.50-0.70,alignment,"mean_rank,mrr",15,5,0.6,0.5616,2.2,1,0,8,11,0.5455,0.4931,1.73
+corpus,oracle,0.25,0.70-0.95,alignment,"mean_rank,mrr",50,26,0.48,0.43,1.29,1,0,20,22,0.4091,0.3561,0.55
+corpus,oracle,0.25,f >= 0.95,alignment,"mean_rank,mrr",339,92,0.7257,0.6353,1.46,1,0,195,110,0.6273,0.575,1.0
+corpus,whole,1.0,f < 0.50,alignment,"mean_rank,mrr",6,0,0.6667,0.5707,8.33,2,0,3,5,0.8,0.6758,5.6
+corpus,whole,1.0,0.50-0.70,alignment,"mean_rank,mrr",15,0,0.8667,0.8357,8.53,1,0,12,11,0.9091,0.8652,6.18
+corpus,whole,1.0,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.8839,1.4,1,0,40,22,1.0,0.827,1.73
+corpus,whole,1.0,f >= 0.95,alignment,"mean_rank,mrr",339,0,0.9912,0.9422,1.46,1,0,307,110,0.9818,0.9014,1.93
+corpus,whole,0.9,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,1.0,1.0,1,0,6,5,1.0,1.0,1.0
+corpus,whole,0.9,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.7333,1.93,1,0,9,11,1.0,0.8523,1.5
+corpus,whole,0.9,0.70-0.95,alignment,"mean_rank,mrr",50,0,1.0,0.94,1.12,1,0,44,22,1.0,0.9318,1.14
+corpus,whole,0.9,f >= 0.95,alignment,"mean_rank,mrr",339,4,0.9882,0.9742,1.04,1,0,327,110,0.9727,0.9341,1.08
+corpus,whole,0.7,f < 0.50,alignment,"mean_rank,mrr",6,0,1.0,0.8333,1.33,1,0,4,5,1.0,0.9,1.2
+corpus,whole,0.7,0.50-0.70,alignment,"mean_rank,mrr",15,0,1.0,0.7111,2.07,1,0,9,11,1.0,0.8371,1.59
+corpus,whole,0.7,0.70-0.95,alignment,"mean_rank,mrr",50,2,0.96,0.91,1.1,1,0,43,22,0.9545,0.8864,1.09
+corpus,whole,0.7,f >= 0.95,alignment,"mean_rank,mrr",339,8,0.9764,0.9358,1.14,1,0,310,110,0.9545,0.8841,1.18
+corpus,whole,0.5,f < 0.50,alignment,"mean_rank,mrr",6,1,0.6667,0.5556,3.8,1,0,3,5,0.6,0.4667,3.6
+corpus,whole,0.5,0.50-0.70,alignment,"mean_rank,mrr",15,2,0.8667,0.5595,2.38,2,0,6,11,0.8182,0.6201,1.55
+corpus,whole,0.5,0.70-0.95,alignment,"mean_rank,mrr",50,5,0.9,0.86,1.09,1,0,41,22,0.9091,0.8636,1.0
+corpus,whole,0.5,f >= 0.95,alignment,"mean_rank,mrr",339,18,0.9469,0.9238,1.05,1,0,306,110,0.9091,0.8901,0.96
+corpus,whole,0.35,f < 0.50,alignment,"mean_rank,mrr",6,1,0.5,0.5174,8.4,1,0,3,5,0.4,0.4209,8.2
+corpus,whole,0.35,0.50-0.70,alignment,"mean_rank,mrr",15,4,0.7333,0.4262,2.64,2,0,4,11,0.7273,0.4838,1.55
+corpus,whole,0.35,0.70-0.95,alignment,"mean_rank,mrr",50,10,0.8,0.72,1.45,1,0,34,22,0.8182,0.7576,1.09
+corpus,whole,0.35,f >= 0.95,alignment,"mean_rank,mrr",339,30,0.9115,0.8493,1.16,1,0,270,110,0.8455,0.7949,0.97
+corpus,whole,0.25,f < 0.50,alignment,"mean_rank,mrr",6,1,0.5,0.5043,31.6,1,0,3,5,0.4,0.4052,31.4
+corpus,whole,0.25,0.50-0.70,alignment,"mean_rank,mrr",15,5,0.5333,0.2791,44.0,3,0,2,11,0.5,0.2986,20.64
+corpus,whole,0.25,0.70-0.95,alignment,"mean_rank,mrr",50,26,0.48,0.3875,2.04,1,0,17,22,0.4091,0.3239,0.82
+corpus,whole,0.25,f >= 0.95,alignment,"mean_rank,mrr",339,92,0.7257,0.6289,1.49,1,0,192,110,0.6273,0.5667,1.03
+hand,auto,1.0,f < 0.50,alignment,"mean_rank,mrr",4,0,1.0,0.8333,1.5,1,0,3,4,1.0,0.8333,1.5
+hand,auto,1.0,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,auto,1.0,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,auto,1.0,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,auto,0.9,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.5833,1.67,1,0,2,4,0.75,0.5833,1.25
+hand,auto,0.9,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,auto,0.9,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,auto,0.9,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,auto,0.7,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.5833,1.67,1,0,2,4,0.75,0.5833,1.25
+hand,auto,0.7,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,auto,0.7,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,auto,0.7,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,auto,0.5,f < 0.50,alignment,"mean_rank,mrr",4,1,0.5,0.5132,7.0,1,0,2,4,0.5,0.5132,5.25
+hand,auto,0.5,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,auto,0.5,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,0.8571,1.29,1,0,5,5,1.0,0.9,1.2
+hand,auto,0.5,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,auto,0.35,f < 0.50,alignment,"mean_rank,mrr",4,1,0.5,0.5125,7.33,1,0,2,4,0.5,0.5125,5.5
+hand,auto,0.35,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,auto,0.35,0.70-0.95,alignment,"mean_rank,mrr",7,0,0.8571,0.6468,6.43,2,0,3,5,0.8,0.6056,8.4
+hand,auto,0.35,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,1.0,1.0,1,0,8,8,1.0,1.0,1.0
+hand,auto,0.25,f < 0.50,alignment,"mean_rank,mrr",4,2,0.25,0.0468,27.5,27,0,0,4,0.25,0.0468,13.75
+hand,auto,0.25,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,0.3333,3.0,3,0,0,1,1.0,0.3333,3.0
+hand,auto,0.25,0.70-0.95,alignment,"mean_rank,mrr",7,2,0.5714,0.3345,25.8,2,0,1,5,0.6,0.3683,25.4
+hand,auto,0.25,f >= 0.95,alignment,"mean_rank,mrr",8,1,0.875,0.7917,1.29,1,0,6,8,0.875,0.7917,1.12
+hand,auto_per_segment,1.0,f < 0.50,alignment,"mean_rank,mrr",4,0,1.0,0.8333,1.5,1,0,3,4,1.0,0.8333,1.5
+hand,auto_per_segment,1.0,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,auto_per_segment,1.0,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,auto_per_segment,1.0,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,auto_per_segment,0.9,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.5833,1.67,1,0,2,4,0.75,0.5833,1.25
+hand,auto_per_segment,0.9,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,auto_per_segment,0.9,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,auto_per_segment,0.9,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,auto_per_segment,0.7,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.5833,1.67,1,0,2,4,0.75,0.5833,1.25
+hand,auto_per_segment,0.7,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,auto_per_segment,0.7,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,auto_per_segment,0.7,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,auto_per_segment,0.5,f < 0.50,alignment,"mean_rank,mrr",4,1,0.5,0.5132,7.0,1,0,2,4,0.5,0.5132,5.25
+hand,auto_per_segment,0.5,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,auto_per_segment,0.5,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,auto_per_segment,0.5,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,auto_per_segment,0.35,f < 0.50,alignment,"mean_rank,mrr",4,1,0.5,0.5125,7.33,1,0,2,4,0.5,0.5125,5.5
+hand,auto_per_segment,0.35,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,auto_per_segment,0.35,0.70-0.95,alignment,"mean_rank,mrr",7,0,0.8571,0.7897,6.14,1,0,5,5,0.8,0.7056,8.2
+hand,auto_per_segment,0.35,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,1.0,1.0,1,0,8,8,1.0,1.0,1.0
+hand,auto_per_segment,0.25,f < 0.50,alignment,"mean_rank,mrr",4,2,0.25,0.2551,25.0,25,0,1,4,0.25,0.2551,12.5
+hand,auto_per_segment,0.25,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,0.5,2.0,2,0,0,1,1.0,0.5,2.0
+hand,auto_per_segment,0.25,0.70-0.95,alignment,"mean_rank,mrr",7,2,0.5714,0.4774,25.4,1,0,3,5,0.6,0.4683,25.2
+hand,auto_per_segment,0.25,f >= 0.95,alignment,"mean_rank,mrr",8,1,0.875,0.7917,1.29,1,0,6,8,0.875,0.7917,1.12
+hand,bhs,1.0,f < 0.50,alignment,"mean_rank,mrr",4,0,0.75,0.5833,7720.5,2,1,2,4,0.75,0.5833,7720.5
+hand,bhs,1.0,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,bhs,1.0,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,bhs,1.0,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,bhs,0.9,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.5833,1.67,1,0,2,4,0.75,0.5833,1.25
+hand,bhs,0.9,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,bhs,0.9,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,bhs,0.9,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,bhs,0.7,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.5833,1.67,1,0,2,4,0.75,0.5833,1.25
+hand,bhs,0.7,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,bhs,0.7,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,bhs,0.7,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,bhs,0.5,f < 0.50,alignment,"mean_rank,mrr",4,1,0.5,0.5132,7.0,1,0,2,4,0.5,0.5132,5.25
+hand,bhs,0.5,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,bhs,0.5,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,0.8571,1.29,1,0,5,5,1.0,0.9,1.2
+hand,bhs,0.5,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,bhs,0.35,f < 0.50,alignment,"mean_rank,mrr",4,1,0.5,0.5125,7.33,1,0,2,4,0.5,0.5125,5.5
+hand,bhs,0.35,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,bhs,0.35,0.70-0.95,alignment,"mean_rank,mrr",7,0,0.8571,0.6467,6.57,2,0,3,5,0.8,0.6054,8.6
+hand,bhs,0.35,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,1.0,1.0,1,0,8,8,1.0,1.0,1.0
+hand,bhs,0.25,f < 0.50,alignment,"mean_rank,mrr",4,2,0.0,0.014,38.5,38,0,0,4,0.0,0.014,19.25
+hand,bhs,0.25,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,0.3333,3.0,3,0,0,1,1.0,0.3333,3.0
+hand,bhs,0.25,0.70-0.95,alignment,"mean_rank,mrr",7,2,0.5714,0.3339,50.0,2,0,1,5,0.6,0.3675,49.6
+hand,bhs,0.25,f >= 0.95,alignment,"mean_rank,mrr",8,1,0.875,0.7917,1.29,1,0,6,8,0.875,0.7917,1.12
+hand,bhs_per_segment,1.0,f < 0.50,alignment,"mean_rank,mrr",4,0,0.75,0.625,7720.25,1,1,2,4,0.75,0.625,7720.25
+hand,bhs_per_segment,1.0,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,bhs_per_segment,1.0,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,bhs_per_segment,1.0,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,bhs_per_segment,0.9,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.75,1.0,1,0,3,4,0.75,0.75,0.75
+hand,bhs_per_segment,0.9,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,bhs_per_segment,0.9,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,bhs_per_segment,0.9,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,bhs_per_segment,0.7,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.75,1.0,1,0,3,4,0.75,0.75,0.75
+hand,bhs_per_segment,0.7,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,bhs_per_segment,0.7,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,bhs_per_segment,0.7,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,bhs_per_segment,0.5,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.75,1.0,1,0,3,4,0.75,0.75,0.75
+hand,bhs_per_segment,0.5,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,bhs_per_segment,0.5,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,bhs_per_segment,0.5,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,bhs_per_segment,0.35,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.75,1.0,1,0,3,4,0.75,0.75,0.75
+hand,bhs_per_segment,0.35,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,bhs_per_segment,0.35,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,bhs_per_segment,0.35,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,1.0,1.0,1,0,8,8,1.0,1.0,1.0
+hand,bhs_per_segment,0.25,f < 0.50,alignment,"mean_rank,mrr",4,2,0.25,0.2589,14.5,14,0,1,4,0.25,0.2589,7.25
+hand,bhs_per_segment,0.25,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,0.5,2.0,2,0,0,1,1.0,0.5,2.0
+hand,bhs_per_segment,0.25,0.70-0.95,alignment,"mean_rank,mrr",7,2,0.7143,0.7143,1.0,1,0,5,5,0.8,0.8,0.8
+hand,bhs_per_segment,0.25,f >= 0.95,alignment,"mean_rank,mrr",8,1,0.875,0.7917,1.29,1,0,6,8,0.875,0.7917,1.12
+hand,oracle,1.0,f < 0.50,alignment,"mean_rank,mrr",4,0,1.0,0.875,1.25,1,0,3,4,1.0,0.875,1.25
+hand,oracle,1.0,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,oracle,1.0,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,oracle,1.0,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,oracle,0.9,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.75,1.0,1,0,3,4,0.75,0.75,0.75
+hand,oracle,0.9,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,oracle,0.9,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,oracle,0.9,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,oracle,0.7,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.75,1.0,1,0,3,4,0.75,0.75,0.75
+hand,oracle,0.7,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,oracle,0.7,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,oracle,0.7,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,oracle,0.5,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.75,1.0,1,0,3,4,0.75,0.75,0.75
+hand,oracle,0.5,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,oracle,0.5,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,oracle,0.5,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,oracle,0.35,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.75,1.0,1,0,3,4,0.75,0.75,0.75
+hand,oracle,0.35,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,oracle,0.35,0.70-0.95,alignment,"mean_rank,mrr",7,0,0.8571,0.8611,6.0,1,0,6,5,0.8,0.8056,8.0
+hand,oracle,0.35,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,1.0,1.0,1,0,8,8,1.0,1.0,1.0
+hand,oracle,0.25,f < 0.50,alignment,"mean_rank,mrr",4,2,0.5,0.375,1.5,1,0,1,4,0.5,0.375,0.75
+hand,oracle,0.25,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,0.5,2.0,2,0,0,1,1.0,0.5,2.0
+hand,oracle,0.25,0.70-0.95,alignment,"mean_rank,mrr",7,2,0.5714,0.5726,25.0,1,0,4,5,0.6,0.6017,24.8
+hand,oracle,0.25,f >= 0.95,alignment,"mean_rank,mrr",8,1,0.875,0.7917,1.29,1,0,6,8,0.875,0.7917,1.12
+hand,whole,1.0,f < 0.50,alignment,"mean_rank,mrr",4,0,1.0,0.8333,1.5,1,0,3,4,1.0,0.8333,1.5
+hand,whole,1.0,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,whole,1.0,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,whole,1.0,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,whole,0.9,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.5833,1.67,1,0,2,4,0.75,0.5833,1.25
+hand,whole,0.9,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,whole,0.9,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,whole,0.9,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,whole,0.7,f < 0.50,alignment,"mean_rank,mrr",4,1,0.75,0.5833,1.67,1,0,2,4,0.75,0.5833,1.25
+hand,whole,0.7,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,whole,0.7,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,1.0,1.0,1,0,7,5,1.0,1.0,1.0
+hand,whole,0.7,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,whole,0.5,f < 0.50,alignment,"mean_rank,mrr",4,1,0.5,0.5132,7.0,1,0,2,4,0.5,0.5132,5.25
+hand,whole,0.5,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,whole,0.5,0.70-0.95,alignment,"mean_rank,mrr",7,0,1.0,0.8571,1.29,1,0,5,5,1.0,0.9,1.2
+hand,whole,0.5,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,0.9375,1.12,1,0,7,8,1.0,0.9375,1.12
+hand,whole,0.35,f < 0.50,alignment,"mean_rank,mrr",4,1,0.5,0.5125,7.33,1,0,2,4,0.5,0.5125,5.5
+hand,whole,0.35,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,1.0,1.0,1,0,1,1,1.0,1.0,1.0
+hand,whole,0.35,0.70-0.95,alignment,"mean_rank,mrr",7,0,0.8571,0.6468,6.43,2,0,3,5,0.8,0.6056,8.4
+hand,whole,0.35,f >= 0.95,alignment,"mean_rank,mrr",8,0,1.0,1.0,1.0,1,0,8,8,1.0,1.0,1.0
+hand,whole,0.25,f < 0.50,alignment,"mean_rank,mrr",4,2,0.0,0.014,38.5,38,0,0,4,0.0,0.014,19.25
+hand,whole,0.25,0.50-0.70,alignment,"mean_rank,mrr",1,0,1.0,0.3333,3.0,3,0,0,1,1.0,0.3333,3.0
+hand,whole,0.25,0.70-0.95,alignment,"mean_rank,mrr",7,2,0.5714,0.3345,25.8,2,0,1,5,0.6,0.3683,25.4
+hand,whole,0.25,f >= 0.95,alignment,"mean_rank,mrr",8,1,0.875,0.7917,1.29,1,0,6,8,0.875,0.7917,1.12
+synth_random,auto,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9296,1.46,1,0,132,24,1.0,0.9296,1.46
+synth_random,auto,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,auto,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,auto,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_random,auto,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9417,1.42,1,0,132,24,1.0,0.9417,1.42
+synth_random,auto,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,auto,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,auto,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_random,auto,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9792,1.04,1,0,138,24,1.0,0.9792,1.04
+synth_random,auto,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,auto,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,auto,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_random,auto,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9583,1.08,1,0,132,24,1.0,0.9583,1.08
+synth_random,auto,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,auto,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,auto,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_random,auto,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9306,1.14,1,0,124,24,1.0,0.9306,1.14
+synth_random,auto,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9236,1.15,1,0,61,24,1.0,0.9236,1.15
+synth_random,auto,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9306,1.14,1,0,62,24,1.0,0.9306,1.14
+synth_random,auto,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_random,auto,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.6667,0.6476,2.35,1,0,90,24,0.6667,0.6476,1.67
+synth_random,auto,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.6667,0.6476,2.35,1,0,45,24,0.6667,0.6476,1.67
+synth_random,auto,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.6667,0.6476,2.35,1,0,45,24,0.6667,0.6476,1.67
+synth_random,auto,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6476,2.35,1,0,30,24,0.6667,0.6476,1.67
+synth_random,auto_per_segment,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9296,1.46,1,0,132,24,1.0,0.9296,1.46
+synth_random,auto_per_segment,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,auto_per_segment,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,auto_per_segment,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_random,auto_per_segment,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9451,1.41,1,0,133,24,1.0,0.9451,1.41
+synth_random,auto_per_segment,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,auto_per_segment,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,auto_per_segment,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_random,auto_per_segment,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9792,1.04,1,0,138,24,1.0,0.9792,1.04
+synth_random,auto_per_segment,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,auto_per_segment,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,auto_per_segment,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_random,auto_per_segment,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9583,1.08,1,0,132,24,1.0,0.9583,1.08
+synth_random,auto_per_segment,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,auto_per_segment,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,auto_per_segment,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_random,auto_per_segment,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9306,1.14,1,0,124,24,1.0,0.9306,1.14
+synth_random,auto_per_segment,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9236,1.15,1,0,61,24,1.0,0.9236,1.15
+synth_random,auto_per_segment,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9306,1.14,1,0,62,24,1.0,0.9306,1.14
+synth_random,auto_per_segment,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_random,auto_per_segment,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.6667,0.6476,2.35,1,0,90,24,0.6667,0.6476,1.67
+synth_random,auto_per_segment,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.6667,0.6476,2.35,1,0,45,24,0.6667,0.6476,1.67
+synth_random,auto_per_segment,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.6667,0.6476,2.35,1,0,45,24,0.6667,0.6476,1.67
+synth_random,auto_per_segment,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6476,2.35,1,0,30,24,0.6667,0.6476,1.67
+synth_random,bhs,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9296,1.46,1,0,132,24,1.0,0.9296,1.46
+synth_random,bhs,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,bhs,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,bhs,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_random,bhs,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9417,1.42,1,0,132,24,1.0,0.9417,1.42
+synth_random,bhs,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,bhs,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,bhs,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_random,bhs,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9792,1.04,1,0,138,24,1.0,0.9792,1.04
+synth_random,bhs,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,bhs,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,bhs,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_random,bhs,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9583,1.08,1,0,132,24,1.0,0.9583,1.08
+synth_random,bhs,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,bhs,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,bhs,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_random,bhs,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9375,1.12,1,0,126,24,1.0,0.9375,1.12
+synth_random,bhs,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9375,1.12,1,0,63,24,1.0,0.9375,1.12
+synth_random,bhs,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9375,1.12,1,0,63,24,1.0,0.9375,1.12
+synth_random,bhs,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_random,bhs,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.6667,0.6468,3.59,1,0,90,24,0.6667,0.6468,2.54
+synth_random,bhs,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.6667,0.6468,3.59,1,0,45,24,0.6667,0.6468,2.54
+synth_random,bhs,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.6667,0.6468,3.59,1,0,45,24,0.6667,0.6468,2.54
+synth_random,bhs,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6468,3.59,1,0,30,24,0.6667,0.6468,2.54
+synth_random,bhs_per_segment,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9296,1.46,1,0,132,24,1.0,0.9296,1.46
+synth_random,bhs_per_segment,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,bhs_per_segment,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,bhs_per_segment,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_random,bhs_per_segment,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9417,1.42,1,0,132,24,1.0,0.9417,1.42
+synth_random,bhs_per_segment,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,bhs_per_segment,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,bhs_per_segment,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_random,bhs_per_segment,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9792,1.04,1,0,138,24,1.0,0.9792,1.04
+synth_random,bhs_per_segment,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,bhs_per_segment,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,bhs_per_segment,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_random,bhs_per_segment,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9583,1.08,1,0,132,24,1.0,0.9583,1.08
+synth_random,bhs_per_segment,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,bhs_per_segment,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,bhs_per_segment,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_random,bhs_per_segment,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9375,1.12,1,0,126,24,1.0,0.9375,1.12
+synth_random,bhs_per_segment,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9375,1.12,1,0,63,24,1.0,0.9375,1.12
+synth_random,bhs_per_segment,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9375,1.12,1,0,63,24,1.0,0.9375,1.12
+synth_random,bhs_per_segment,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_random,bhs_per_segment,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.6667,0.6468,3.59,1,0,90,24,0.6667,0.6468,2.54
+synth_random,bhs_per_segment,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.6667,0.6468,3.59,1,0,45,24,0.6667,0.6468,2.54
+synth_random,bhs_per_segment,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.6667,0.6468,3.59,1,0,45,24,0.6667,0.6468,2.54
+synth_random,bhs_per_segment,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6468,3.59,1,0,30,24,0.6667,0.6468,2.54
+synth_random,oracle,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9296,1.46,1,0,132,24,1.0,0.9296,1.46
+synth_random,oracle,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,oracle,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,oracle,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_random,oracle,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9417,1.42,1,0,132,24,1.0,0.9417,1.42
+synth_random,oracle,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,oracle,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,oracle,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_random,oracle,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9792,1.04,1,0,138,24,1.0,0.9792,1.04
+synth_random,oracle,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,oracle,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,oracle,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_random,oracle,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9583,1.08,1,0,132,24,1.0,0.9583,1.08
+synth_random,oracle,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,oracle,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,oracle,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_random,oracle,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9375,1.12,1,0,126,24,1.0,0.9375,1.12
+synth_random,oracle,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9375,1.12,1,0,63,24,1.0,0.9375,1.12
+synth_random,oracle,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9375,1.12,1,0,63,24,1.0,0.9375,1.12
+synth_random,oracle,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_random,oracle,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.6667,0.6476,2.35,1,0,90,24,0.6667,0.6476,1.67
+synth_random,oracle,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.6667,0.6476,2.35,1,0,45,24,0.6667,0.6476,1.67
+synth_random,oracle,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.6667,0.6476,2.35,1,0,45,24,0.6667,0.6476,1.67
+synth_random,oracle,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6476,2.35,1,0,30,24,0.6667,0.6476,1.67
+synth_random,whole,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9296,1.46,1,0,132,24,1.0,0.9296,1.46
+synth_random,whole,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,whole,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_random,whole,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_random,whole,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9417,1.42,1,0,132,24,1.0,0.9417,1.42
+synth_random,whole,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,whole,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_random,whole,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_random,whole,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9792,1.04,1,0,138,24,1.0,0.9792,1.04
+synth_random,whole,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,whole,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_random,whole,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_random,whole,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9583,1.08,1,0,132,24,1.0,0.9583,1.08
+synth_random,whole,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,whole,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_random,whole,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_random,whole,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9375,1.12,1,0,126,24,1.0,0.9375,1.12
+synth_random,whole,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9306,1.14,1,0,62,24,1.0,0.9306,1.14
+synth_random,whole,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9375,1.12,1,0,63,24,1.0,0.9375,1.12
+synth_random,whole,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_random,whole,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.6667,0.6442,2.36,1,0,89,24,0.6667,0.6442,1.67
+synth_random,whole,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.6667,0.6476,2.35,1,0,45,24,0.6667,0.6476,1.67
+synth_random,whole,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.6667,0.6476,2.35,1,0,45,24,0.6667,0.6476,1.67
+synth_random,whole,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6476,2.35,1,0,30,24,0.6667,0.6476,1.67
+synth_real,auto,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,0.8681,0.6322,12.12,1,0,74,24,0.8681,0.6322,12.12
+synth_real,auto,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,auto,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,auto,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_real,auto,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,0.7917,0.5342,27.09,2,0,59,24,0.7917,0.5342,27.09
+synth_real,auto,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.9306,0.8673,4.33,1,0,60,24,0.9306,0.8673,4.33
+synth_real,auto,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9722,0.9078,2.36,1,0,63,24,0.9722,0.9078,2.36
+synth_real,auto,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_real,auto,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,0.6806,0.4178,113.67,3,0,40,24,0.6806,0.4178,113.67
+synth_real,auto,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.8889,0.8436,27.94,1,0,58,24,0.8889,0.8436,27.94
+synth_real,auto,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9306,0.9043,4.74,1,0,63,24,0.9306,0.9043,4.74
+synth_real,auto,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_real,auto,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,0.4583,0.2601,160.03,12,0,20,24,0.4583,0.2601,160.03
+synth_real,auto,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.8472,0.5986,34.86,2,0,33,24,0.8472,0.5986,34.86
+synth_real,auto,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9306,0.8869,4.79,1,0,61,24,0.9306,0.8869,4.79
+synth_real,auto,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_real,auto,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,0.2083,0.0875,284.19,89,0,0,24,0.2083,0.0875,284.19
+synth_real,auto,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.5139,0.2148,108.0,10,0,4,24,0.5139,0.2148,108.0
+synth_real,auto,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.8889,0.7374,17.22,1,0,44,24,0.8889,0.7374,17.22
+synth_real,auto,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_real,auto,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.0556,0.0172,696.77,545,0,0,24,0.0556,0.0172,493.55
+synth_real,auto,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.1389,0.0462,282.57,178,0,0,24,0.1389,0.0462,200.15
+synth_real,auto,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.4722,0.3148,71.29,3,0,17,24,0.4722,0.3148,50.5
+synth_real,auto,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6476,2.35,1,0,30,24,0.6667,0.6476,1.67
+synth_real,auto_per_segment,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,0.9514,0.8162,5.31,1,0,110,24,0.9514,0.8162,5.31
+synth_real,auto_per_segment,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,auto_per_segment,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,auto_per_segment,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_real,auto_per_segment,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,0.9306,0.7961,10.81,1,0,106,24,0.9306,0.7961,10.81
+synth_real,auto_per_segment,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.9583,0.8945,3.07,1,0,62,24,0.9583,0.8945,3.07
+synth_real,auto_per_segment,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9861,0.9212,2.0,1,0,64,24,0.9861,0.9212,2.0
+synth_real,auto_per_segment,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_real,auto_per_segment,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,0.9097,0.8067,40.21,1,0,108,24,0.9097,0.8067,40.21
+synth_real,auto_per_segment,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.9444,0.8984,18.07,1,0,62,24,0.9444,0.8984,18.07
+synth_real,auto_per_segment,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9722,0.9449,2.81,1,0,66,24,0.9722,0.9449,2.81
+synth_real,auto_per_segment,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_real,auto_per_segment,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,0.8403,0.7501,53.26,1,0,98,24,0.8403,0.7501,53.26
+synth_real,auto_per_segment,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.9167,0.7703,21.97,1,0,49,24,0.9167,0.7703,21.97
+synth_real,auto_per_segment,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9722,0.9276,2.86,1,0,64,24,0.9722,0.9276,2.86
+synth_real,auto_per_segment,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_real,auto_per_segment,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,0.75,0.6548,79.0,1,0,82,24,0.75,0.6548,79.0
+synth_real,auto_per_segment,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.7917,0.6671,53.97,1,0,41,24,0.7917,0.6671,53.97
+synth_real,auto_per_segment,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9444,0.8151,10.19,1,0,51,24,0.9444,0.8151,10.19
+synth_real,auto_per_segment,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_real,auto_per_segment,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.4722,0.4391,180.76,1,0,60,24,0.4722,0.4391,128.04
+synth_real,auto_per_segment,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.4722,0.4444,127.88,1,0,30,24,0.4722,0.4444,90.58
+synth_real,auto_per_segment,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.5694,0.4728,37.16,1,0,30,24,0.5694,0.4728,26.32
+synth_real,auto_per_segment,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6476,2.35,1,0,30,24,0.6667,0.6476,1.67
+synth_real,bhs,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,0.8681,0.6317,13.47,1,0,74,24,0.8681,0.6317,13.47
+synth_real,bhs,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,bhs,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,bhs,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_real,bhs,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,0.7917,0.5342,27.13,2,0,59,24,0.7917,0.5342,27.13
+synth_real,bhs,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.9306,0.8673,4.32,1,0,60,24,0.9306,0.8673,4.32
+synth_real,bhs,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9722,0.9147,2.35,1,0,64,24,0.9722,0.9147,2.35
+synth_real,bhs,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_real,bhs,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,0.6806,0.4179,75.63,3,0,40,24,0.6806,0.4179,75.63
+synth_real,bhs,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.8889,0.8437,26.82,1,0,58,24,0.8889,0.8437,26.82
+synth_real,bhs,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9306,0.9112,4.79,1,0,64,24,0.9306,0.9112,4.79
+synth_real,bhs,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_real,bhs,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,0.4722,0.2619,120.9,11,0,20,24,0.4722,0.2619,120.9
+synth_real,bhs,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.8472,0.5986,33.75,2,0,33,24,0.8472,0.5986,33.75
+synth_real,bhs,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9306,0.8904,4.83,1,0,61,24,0.9306,0.8904,4.83
+synth_real,bhs,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_real,bhs,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,0.2361,0.0888,243.7,87,0,0,24,0.2361,0.0888,243.7
+synth_real,bhs,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.5,0.2191,106.82,10,0,4,24,0.5,0.2191,106.82
+synth_real,bhs,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.8889,0.7362,17.26,1,0,43,24,0.8889,0.7362,17.26
+synth_real,bhs,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_real,bhs,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.0556,0.0172,633.07,506,0,0,24,0.0556,0.0172,448.42
+synth_real,bhs,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.1389,0.0471,288.37,178,0,0,24,0.1389,0.0471,204.26
+synth_real,bhs,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.4861,0.3305,71.2,3,0,18,24,0.4861,0.3305,50.43
+synth_real,bhs,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6468,3.59,1,0,30,24,0.6667,0.6468,2.54
+synth_real,bhs_per_segment,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9296,1.46,1,0,132,24,1.0,0.9296,1.46
+synth_real,bhs_per_segment,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,bhs_per_segment,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,bhs_per_segment,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_real,bhs_per_segment,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9417,1.42,1,0,132,24,1.0,0.9417,1.42
+synth_real,bhs_per_segment,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_real,bhs_per_segment,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_real,bhs_per_segment,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_real,bhs_per_segment,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9792,1.04,1,0,138,24,1.0,0.9792,1.04
+synth_real,bhs_per_segment,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_real,bhs_per_segment,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_real,bhs_per_segment,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_real,bhs_per_segment,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9583,1.08,1,0,132,24,1.0,0.9583,1.08
+synth_real,bhs_per_segment,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_real,bhs_per_segment,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_real,bhs_per_segment,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_real,bhs_per_segment,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9375,1.12,1,0,126,24,1.0,0.9375,1.12
+synth_real,bhs_per_segment,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9444,1.11,1,0,64,24,1.0,0.9444,1.11
+synth_real,bhs_per_segment,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9375,1.12,1,0,63,24,1.0,0.9375,1.12
+synth_real,bhs_per_segment,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_real,bhs_per_segment,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.6667,0.6468,3.59,1,0,90,24,0.6667,0.6468,2.54
+synth_real,bhs_per_segment,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.6806,0.6604,2.75,1,0,46,24,0.6806,0.6604,1.94
+synth_real,bhs_per_segment,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.6667,0.6468,3.59,1,0,45,24,0.6667,0.6468,2.54
+synth_real,bhs_per_segment,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6468,3.59,1,0,30,24,0.6667,0.6468,2.54
+synth_real,oracle,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9296,1.46,1,0,132,24,1.0,0.9296,1.46
+synth_real,oracle,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,oracle,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,oracle,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_real,oracle,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9417,1.42,1,0,132,24,1.0,0.9417,1.42
+synth_real,oracle,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_real,oracle,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9417,1.42,1,0,66,24,1.0,0.9417,1.42
+synth_real,oracle,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_real,oracle,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9792,1.04,1,0,138,24,1.0,0.9792,1.04
+synth_real,oracle,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_real,oracle,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9792,1.04,1,0,69,24,1.0,0.9792,1.04
+synth_real,oracle,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_real,oracle,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9583,1.08,1,0,132,24,1.0,0.9583,1.08
+synth_real,oracle,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_real,oracle,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9583,1.08,1,0,66,24,1.0,0.9583,1.08
+synth_real,oracle,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_real,oracle,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,1.0,0.9375,1.12,1,0,126,24,1.0,0.9375,1.12
+synth_real,oracle,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9375,1.12,1,0,63,24,1.0,0.9375,1.12
+synth_real,oracle,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9375,1.12,1,0,63,24,1.0,0.9375,1.12
+synth_real,oracle,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_real,oracle,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.6667,0.6476,2.35,1,0,90,24,0.6667,0.6476,1.67
+synth_real,oracle,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.6667,0.6476,2.35,1,0,45,24,0.6667,0.6476,1.67
+synth_real,oracle,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.6667,0.6476,2.35,1,0,45,24,0.6667,0.6476,1.67
+synth_real,oracle,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6476,2.35,1,0,30,24,0.6667,0.6476,1.67
+synth_real,whole,1.0,f < 0.50,alignment,"mean_rank,mrr",144,0,0.8681,0.6322,12.18,1,0,74,24,0.8681,0.6322,12.18
+synth_real,whole,1.0,0.50-0.70,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,whole,1.0,0.70-0.95,alignment,"mean_rank,mrr",72,0,1.0,0.9296,1.46,1,0,66,24,1.0,0.9296,1.46
+synth_real,whole,1.0,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9296,1.46,1,0,44,24,1.0,0.9296,1.46
+synth_real,whole,0.9,f < 0.50,alignment,"mean_rank,mrr",144,0,0.7917,0.5342,27.09,2,0,59,24,0.7917,0.5342,27.09
+synth_real,whole,0.9,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.9306,0.8673,4.33,1,0,60,24,0.9306,0.8673,4.33
+synth_real,whole,0.9,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9722,0.9078,2.36,1,0,63,24,0.9722,0.9078,2.36
+synth_real,whole,0.9,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9417,1.42,1,0,44,24,1.0,0.9417,1.42
+synth_real,whole,0.7,f < 0.50,alignment,"mean_rank,mrr",144,0,0.6806,0.4178,114.43,3,0,40,24,0.6806,0.4178,114.43
+synth_real,whole,0.7,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.8889,0.8436,28.72,1,0,58,24,0.8889,0.8436,28.72
+synth_real,whole,0.7,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9306,0.9043,4.74,1,0,63,24,0.9306,0.9043,4.74
+synth_real,whole,0.7,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9792,1.04,1,0,46,24,1.0,0.9792,1.04
+synth_real,whole,0.5,f < 0.50,alignment,"mean_rank,mrr",144,0,0.4583,0.2599,160.88,12,0,20,24,0.4583,0.2599,160.88
+synth_real,whole,0.5,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.8472,0.5986,35.64,2,0,33,24,0.8472,0.5986,35.64
+synth_real,whole,0.5,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.9306,0.8869,4.79,1,0,61,24,0.9306,0.8869,4.79
+synth_real,whole,0.5,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9583,1.08,1,0,44,24,1.0,0.9583,1.08
+synth_real,whole,0.35,f < 0.50,alignment,"mean_rank,mrr",144,0,0.2083,0.0874,285.22,89,0,0,24,0.2083,0.0874,285.22
+synth_real,whole,0.35,0.50-0.70,alignment,"mean_rank,mrr",72,0,0.5139,0.2144,109.01,10,0,4,24,0.5139,0.2144,109.01
+synth_real,whole,0.35,0.70-0.95,alignment,"mean_rank,mrr",72,0,0.875,0.7056,17.61,1,0,41,24,0.875,0.7056,17.61
+synth_real,whole,0.35,f >= 0.95,alignment,"mean_rank,mrr",48,0,1.0,0.9375,1.12,1,0,42,24,1.0,0.9375,1.12
+synth_real,whole,0.25,f < 0.50,alignment,"mean_rank,mrr",144,42,0.0556,0.0172,697.56,544,0,0,24,0.0556,0.0172,494.1
+synth_real,whole,0.25,0.50-0.70,alignment,"mean_rank,mrr",72,21,0.1389,0.0462,285.29,182,0,0,24,0.1389,0.0462,202.08
+synth_real,whole,0.25,0.70-0.95,alignment,"mean_rank,mrr",72,21,0.4722,0.2893,71.47,3,0,14,24,0.4722,0.2893,50.62
+synth_real,whole,0.25,f >= 0.95,alignment,"mean_rank,mrr",48,14,0.6667,0.6476,2.35,1,0,30,24,0.6667,0.6476,1.67
