@@ -8,6 +8,7 @@ checkpoints are a 2.6 GB cache and not a dependency.
 """
 from __future__ import annotations
 
+import importlib.util
 from pathlib import Path
 
 import pytest
@@ -25,6 +26,10 @@ SMALL = "facebook/esm2_t12_35M_UR50D"
 
 
 def _cached(name: str) -> bool:
+    # The cache alone is not enough: the code path imports torch, which is an optional extra, so a
+    # machine with the checkpoint and without torch must skip and not fail.
+    if importlib.util.find_spec("torch") is None or importlib.util.find_spec("transformers") is None:
+        return False
     d = Path.home() / ".cache" / "huggingface" / "hub" / ("models--" + name.replace("/", "--"))
     return d.is_dir()
 
@@ -77,7 +82,7 @@ def test_complete_rejects_an_unknown_mode_without_loading_a_model():
     assert c._model is None
 
 
-@pytest.mark.skipif(not _cached(SMALL), reason="ESM-2 35M not in the local HuggingFace cache")
+@pytest.mark.skipif(not _cached(SMALL), reason="ESM-2 35M not in the local HuggingFace cache, or torch/transformers not installed")
 def test_the_completer_emits_only_standard_residues_in_both_modes():
     """The head is free to return `X`, `B`, `<mask>` or `<pad>`; an identity scored against those would
     be an identity against tokens that are not residues. The restriction is what makes the measurement

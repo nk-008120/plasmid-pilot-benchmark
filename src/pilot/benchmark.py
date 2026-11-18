@@ -18,7 +18,7 @@ The rules, with where they come from:
   never a headline** (26.3). Depth 10 was fixed (42.1) and is a stated assumption
   about review practice, not a measurement: depths 10 and 25 return the identical winner set.
 * **For an embedding arm, `recall@10` and MRR are primary and a mean rank may be quoted only beside its
-  count of rank >= 10,000 failures** (32.2). Under mean-pooling the rank distribution is
+  count of rank >= 10,000 failures**. Under mean-pooling the rank distribution is
   bimodal where alignment's is not, so the mean stops describing the centre. `mean_rank_phrase` is the
   only sanctioned rendering, and for an embedding arm it refuses to render without the count.
 * **Micro and macro are both always reported.** Constructs are not independent trials: 410 corpus

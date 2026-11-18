@@ -23,3 +23,8 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# The repo root on sys.path, so that `from tests.X import ...` resolves under the
+# bare `pytest` console script and not only under `python -m pytest`, which puts the
+# working directory there itself. Two modules import shared fixtures that way, and
+# without this a clone that runs `pytest` aborts collection and runs nothing.
+pythonpath = ["."]

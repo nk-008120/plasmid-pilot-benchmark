@@ -4,7 +4,7 @@ __pycache__/
 .venv/
 
 # Raw GenBank downloads: keep them out of git by default (redistribution terms vary by source).
-# Reproducibility is preserved by results/run_info.json (sha256 of every input) and data/manifest.csv (source IDs).
+# The source IDs are in data/manifest.csv; a run_info.json with the sha256 of every input exists only for runs that wrote one.
 data/raw/*
 !data/raw/.gitkeep
 

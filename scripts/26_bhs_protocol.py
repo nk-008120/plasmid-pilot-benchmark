@@ -473,7 +473,7 @@ def main(argv: list[str] | None = None) -> int:
         if pid not in set(keys):
             continue
         print(f"{pid[:40]:<42}{acc:<9}{v['whole']:>7}{v['auto_per_segment']:>8}{v['pooled']:>8}"
-              f"{v['per_segment']:>8}{v["oracle_selected"]:>9}{v["oracle"]:>8}{k:>3}{ka:>6}      "
+              f"{v['per_segment']:>8}{v['oracle_selected']:>9}{v['oracle']:>8}{k:>3}{ka:>6}      "
               f"{[x if x is not None else '-' for x in per]}")
 
     if args.detail_csv and details:

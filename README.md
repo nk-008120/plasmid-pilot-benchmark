@@ -45,11 +45,28 @@ Nothing in the task requires knowing what a plasmid is.
 No archetype, no segment boundaries, no payload span, no tag positions, nothing a decomposition step is
 supposed to discover. `queries.faa` holds the whole ORF, not the payload.
 
+One thing about the bytes. The CSV files open with a UTF-8 byte order mark, because they are written
+`utf-8-sig` for spreadsheet software, and the mark is inside the published checksums. Read them with
+`encoding="utf-8-sig"`; a plain UTF-8 reader gets `\ufeffconstruct_id` as the first column name.
+
 `f` **is** published, and it needs a word of explanation because it is derived from the label. `f =
 oracle_span_length / called_ORF_length` is how much dilution an item imposes: at `f = 1.0` the ORF *is*
 the payload, at `f = 0.4` the payload is a minority of what you are handed. It is computable before any
 retrieval runs, so it is a **description of the item**, the way a test set says how long its sentences
 are. It can never be part of a screening rule, and a method that reads it has stopped doing the task.
+
+## What is in the release that a contest would withhold
+
+`items.csv` carries `payload_accession` for every item and `homologs.csv` lists every target with its
+identity, because the scorer needs both. So **the answer key ships with the items**. A submission written
+from those two files, with no sequence read at all, scores mean rank 1.00 and MRR 1.0000 in every cell
+that has a target, no binding count flags it, and nothing in `53_score_submission.py` can tell it from a
+method. I checked that by building one.
+
+So this is a benchmark for scoring your own method under fixed conditions and comparing in good faith. It
+is not a blind contest, and a number reported on it is only as good as the statement that the method read
+`queries.faa` and the catalogue and never those two columns. A blind variant would withhold
+`payload_accession` and `homologs.csv` and score submissions on request; this release does not do that.
 
 ## Provenance: where each item came from
 
@@ -126,9 +143,14 @@ mostly by me, and mostly after a measurement went wrong.
    matters.
 4. **Micro and macro are both always reported.** Items are not independent trials: 410 corpus constructs
    carry 138 distinct payloads and one appears in 37 of them, so a micro average can be 37 repetitions of
-   one answer.
+   one answer. Repetition goes further than shared payloads: 203 of the 410 corpus items repeat a
+   (query protein, payload) pair another item already has, the largest such group is 22 items, and the
+   corpus is 207 distinct measurements. Read the macro column.
 5. **An item that cannot be scored stays in the denominator, as a miss.** Dropping it shrinks `n` exactly
-   where the measurement gets hard.
+   where the measurement gets hard. In the published baselines the `unscor` column counts items with no
+   target left at the holdout. For a ranked-list submission it also counts items whose target lies
+   deeper than the list, which `rank_beyond_submitted_depth` reports on its own line, so subtract that
+   before comparing the column across the two.
 6. **The tiers are never pooled into one number.** They cover each other's weaknesses; a pooled
    figure is a measurement of the mixing proportions.
 7. **Review depth 10 is a stated assumption, not a result.** Depths 10 and 25 return the identical winner
@@ -232,8 +254,9 @@ its conditions like any other.
 | hand | `bhs_per_segment` | 0.250 | 1.000 (n=1) | 0.714 | 0.875 |
 
 Read the `synth_real` block, which is the tier built inside the diluted regime. `oracle` is flat at 0.667
-by construction, it queries with the payload span, so dilution cannot touch it, and 0.667 is just the 16
-of 24 payloads whose family is reachable at all at this holdout. `whole` climbs 0.056 -> 0.667 as dilution
+by construction, it queries with the payload span, so dilution cannot touch it, and 0.667 is 16 of 24
+payloads: 17 have a family member left at this holdout and the labelled span puts 16 of them inside
+depth ten. `whole` climbs 0.056 -> 0.667 as dilution
 disappears, meeting the ceiling only where there is no dilution left. And `bhs_per_segment`, which is
 **label-free**, sits on the ceiling in every stratum.
 
@@ -246,10 +269,16 @@ Two honest limits on that reading. The ceiling is payload-limited at 16 of 24, s
 `synth_real` is a constructed condition, so it is a bound on the real case rather than a measurement of
 it; the corpus and hand rows are the measured ends.
 
+A third limit is on the comparison itself. Every segment arm issues `k` queries per item and keeps the
+best rank, where `whole` and `oracle` issue one, so `whole` against `bhs_per_segment` mixes
+decomposition with best-of-`k`. The fixed-window arm built to separate the two, `tile_per_segment`, is
+in the code and not in this baseline; the working repository reports that measurement.
+
 **The `synth_random` row is flat at 0.667 everywhere, and that is the design rather than a bug.** Every
 arm, every stratum, one value. Two measured facts meet there: random filler is invisible to a local
-alignment, so `whole` is bit-identical to `oracle` on all 336 constructs, and the tier is
-payload-balanced, so each stratum sees the same 16-of-24 reachable payloads. It is what a stratum
+alignment, so `whole` ranks identically to `oracle` on all 336 constructs at holdouts 1.00 to 0.50 and
+on all but one at 0.35 and at 0.25 (rank 2 against 1, so `recall@10` does not move), and the tier is
+payload-balanced, so each stratum sees the same 24 payloads and retrieves the same 16. It is what a stratum
 assignment silently failing to apply would also look like, which is why it is said here. **Under a
 mean-pooled embedding arm the same tier is the worst case in the benchmark**, `recall@10` 0.0% at a
 median rank of 19,170 against a chance median of 20,375, so the flatness is a statement about
@@ -388,12 +417,23 @@ a check of nothing. Both halves are fixed and both are pinned by tests.
   an arm that correctly identifies a construct's *other* real gene scores zero. `ncbi_M88535_1` is the
   worked example: a CTAP-III-hirudin fusion whose depositor annotates both halves.
 
-## Reproducing the build
+## Installing, and checking the build
 
 ```bash
-python scripts/52_build_benchmark.py --out-dir benchmark/v1
+pip install -e ".[dev,align]"
 python -m pytest tests/test_benchmark.py
 ```
+
+Python 3.10 or later. That test file checks the shipped files against the rules and the published
+checksums. Bare `pytest` runs the whole suite; tests that need a model cache or a run folder that is
+not shipped skip and say what is missing.
+
+**A full rebuild does not run from this release.** `scripts/52_build_benchmark.py` reads finished run
+folders and the catalogue FASTA, and neither is in the tree. The `results_dir` and `published_source`
+values in `MANIFEST.json` and `crosscheck_hand_whole.json` name run folders in my working copy; they
+record where each number came from and are not paths a reader can open. What is reachable is a
+verification: with the catalogue FASTA from the release attachment, `--verify-catalogue` checks it
+against `catalogue_accessions.txt` and the published sha256.
 
 The build derives `f` by calling `pilot.arms.build_arms`, the same function the project's own measurements
 use, so there is exactly one definition of `f` in the repository. There used to be two, and the second one

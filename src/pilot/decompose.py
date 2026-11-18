@@ -336,6 +336,14 @@ class ReplayMismatch(ValueError):
     """A span file does not reproduce the run it claims to describe. Never recoverable, never warned."""
 
 
+#: How far a span file's recorded floor may sit from the floor the replaying run computes. The
+#: writer rounds the floor to two decimals, which moves it by at most 0.005; checked against the run
+#: that wrote it, every span file on disk agrees to within 0.0050. At lambda 0.267 a gap of 0.01 is a
+#: 0.27% change in the searched residue count, and the catalogue mix-ups this guards against are
+#: 1.3 to 2 points apart, so the margin is wide on both sides.
+FLOOR_TOLERANCE = 0.01
+
+
 def span_rows_at(rows: list[dict], threshold: float | None = None) -> list[dict]:
     """The span rows describing ONE segmentation, out of a `bhs_spans_*.csv` that may hold several.
 
@@ -394,7 +402,11 @@ def replay_best_hit_segments(
 
     **And it is checked rather than trusted.** The rows carry three quantities this function recomputes
     independently, `newly_masked`, `emitted` and `orf_len`, and any disagreement raises
-    `ReplayMismatch`. There is deliberately no repair path and no warning: a span file that does not
+    `ReplayMismatch`. When the caller passes `floor`, the recorded floor is a fourth: the floor is a
+    function of the ORF length and the searched residue count, so a span file made against a catalogue
+    of a different size records a different floor, and the mask bookkeeping alone would not show it.
+    Each row's floor must match the caller's to within `FLOOR_TOLERANCE`, which is the writer's
+    rounding. There is deliberately no repair path and no warning: a span file that does not
     reproduce its own invariants is describing a different run, and the only correct response is to
     stop. `n_catalogue_entries_masked` is checked by the caller, which is where the holdout mask lives.
 
@@ -420,6 +432,14 @@ def replay_best_hit_segments(
     if declared_len != n:
         raise ReplayMismatch(
             f"span file says orf_len={declared_len}, this run's ORF is {n} residues long")
+    if floor is not None:
+        for r in rows:
+            if abs(float(r["floor"]) - floor) > FLOOR_TOLERANCE:
+                raise ReplayMismatch(
+                    f"iteration {r['iteration']}: span file records a floor of {r['floor']} for this "
+                    f"{n} aa ORF, this run computes {floor:.2f}. The floor is set by the searched "
+                    f"residue count and the E-value gate, so the segmentation was made against a "
+                    f"different catalogue or gate and does not describe this run")
 
     masked = [False] * n
     segments: list[Segment] = []

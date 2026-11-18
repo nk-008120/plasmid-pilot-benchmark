@@ -23,6 +23,7 @@ import pytest
 from pilot.align import AlignmentScorer
 from pilot.arms import build_arms
 from pilot.decompose import ReplayMismatch, best_hit_segments, replay_best_hit_segments
+from pilot.homology import score_floor
 
 parasail = pytest.importorskip("parasail", reason="the alignment arm is an optional dependency")
 
@@ -216,3 +217,54 @@ def test_replay_never_touches_the_scorer():
                       db_residues=DB_RESIDUES, ref_accessions=["PAY"],
                       bhs_replay=_as_span_rows(orf, res))
     assert len(arms.bhs) == len(res.segments)
+
+
+def test_a_floor_from_a_different_catalogue_is_refused():
+    """The floor is the one recorded quantity that depends on the catalogue's size and nothing else.
+
+    A span file made against the 20.8 M residue whole-protein catalogue and replayed against the 35.1 M
+    residue windowed one passes every mask check and differs only here, by about two points.
+    """
+    orf, _refs, _accs, _scorer, res = _segmented()
+    rows = _as_span_rows(orf, res)
+    wrong = score_floor(1e-3, len(orf), 35_081_185)
+    assert abs(wrong - res.floor) > 1.0, "the fixture must put the two floors well apart"
+    with pytest.raises(ReplayMismatch, match="floor"):
+        replay_best_hit_segments(orf, rows, min_len=50, floor=wrong)
+
+
+def test_the_floor_check_allows_the_writers_rounding():
+    """The span file rounds the floor to two decimals, so the live floor must still replay."""
+    orf, _refs, _accs, _scorer, res = _segmented()
+    rows = _as_span_rows(orf, res)
+    back = replay_best_hit_segments(orf, rows, min_len=50, floor=res.floor)
+    assert [(s.start, s.end) for s in back.segments] == [(s.start, s.end) for s in res.segments]
+    for r in rows:
+        assert abs(float(r["floor"]) - res.floor) <= 0.005 + 1e-9
+
+
+def test_the_floor_check_is_tight_enough_to_see_a_one_percent_change():
+    """A 1% change in the searched residues moves the floor by 0.037, which must be refused.
+
+    Pinned so the tolerance cannot be widened quietly until it stops checking anything.
+    """
+    orf, _refs, _accs, _scorer, res = _segmented()
+    rows = _as_span_rows(orf, res)
+    near = score_floor(1e-3, len(orf), int(DB_RESIDUES * 1.01))
+    with pytest.raises(ReplayMismatch, match="floor"):
+        replay_best_hit_segments(orf, rows, min_len=50, floor=near)
+
+
+def test_build_arms_refuses_a_replay_against_a_different_database_size():
+    """Through the caller the script uses: the floor `segment_arms` computes is the one checked."""
+    orf = DISTRACTOR + PAYLOAD
+    refs = [PAYLOAD, DISTRACTOR, FILLER]
+    accs = ["PAY", "DIS", "FIL"]
+    scorer = AlignmentScorer(refs)
+    orfs = {"orf1": orf}
+    live = build_arms("p", orfs, PAYLOAD, ref_seqs=refs, scorer=scorer, db_residues=DB_RESIDUES,
+                      ref_accessions=accs, exclude_idx=np.array([], dtype=int))
+    rows = _as_span_rows(orf, live.bhs_result)
+    with pytest.raises(ReplayMismatch, match="floor"):
+        build_arms("p", orfs, PAYLOAD, ref_seqs=refs, scorer=scorer, db_residues=2 * DB_RESIDUES,
+                   ref_accessions=accs, exclude_idx=np.array([], dtype=int), bhs_replay=rows)
